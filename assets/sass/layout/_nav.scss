@@ -79,6 +79,34 @@
 			}
 		}
 
+		.language-toggle {
+			background: transparent;
+			border: 0;
+			box-shadow: none;
+			color: _palette(fg-bold);
+			cursor: pointer;
+			display: block;
+			font-family: _font(family-heading);
+			font-size: 0.8rem;
+			font-weight: _font(weight-heading);
+			height: 4rem;
+			letter-spacing: 0.075em;
+			line-height: 4rem;
+			padding: 0 2rem;
+			text-transform: uppercase;
+			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+			&:hover {
+				background-color: transparentize(_palette(invert, fg), 0.9);
+				color: inherit;
+			}
+
+			&:focus-visible {
+				outline: 2px solid _palette(invert, accent);
+				outline-offset: -5px;
+			}
+		}
+
 		@include breakpoint('<=medium') {
 			display: none;
 		}

@@ -3026,6 +3026,7 @@ input, select, textarea {
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
 			font-size: 0.8rem;
 			font-weight: 900;
+			height: 4rem;
 			letter-spacing: 0.075em;
 			line-height: 1.5;
 			padding: 0 0.75rem 0.75rem 0.75rem;
@@ -3310,7 +3311,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 75vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3453,7 +3454,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
+				min-height: 70vh;
 			}
 
 				#intro p br {
@@ -3470,7 +3471,7 @@ input, select, textarea {
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				min-height: 65vh;
 			}
 
 				#intro h1 {
@@ -3745,6 +3746,35 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
+		#nav .language-toggle {
+			background: transparent;
+			border: 0;
+			box-shadow: none;
+			color: #ffffff;
+			cursor: pointer;
+			display: block;
+			font-family: "Source Sans Pro", Helvetica, sans-serif;
+			font-size: 0.8rem;
+			font-weight: 900;
+			height: 4rem;
+			letter-spacing: 0.075em;
+			line-height: 4rem;
+			padding: 0 2rem;
+			text-transform: uppercase;
+			-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		}
+
+			#nav .language-toggle:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+				color: inherit;
+			}
+
+			#nav .language-toggle:focus-visible {
+				outline: 2px solid #18bfef;
+				outline-offset: -4px;
+			}
+
 		@media screen and (max-width: 980px) {
 
 			#nav {
@@ -3756,7 +3786,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #fff7e6;
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
@@ -3793,8 +3823,14 @@ input, select, textarea {
 			}
 
 			#main > .post.featured {
+				padding-bottom: 0;
 				text-align: center;
 			}
+
+				#main > .post.featured header.major h2 .subtitle {
+					display: inline-block;
+					font-size: 2rem;
+				}
 
 			@media screen and (max-width: 1280px) {
 
@@ -3862,23 +3898,113 @@ input, select, textarea {
 			}
 
 			#main > .posts > article {
-				border-color: #eeeeee;
-				border-left-width: 2px;
-				border-style: solid;
-				border-top-width: 2px;
 				text-align: center;
 			}
 
-				#main > .posts > article > :last-child {
-					margin-bottom: 0;
+				#main > .posts > article .project-card {
+					background: #f5f5f5;
+					border: 0;
+					border-radius: 0.375rem;
+					color: #212931;
+					display: -moz-flex;
+					display: -webkit-flex;
+					display: -ms-flex;
+					display: flex;
+					-moz-flex-direction: column;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					height: 100%;
+					overflow: hidden;
+					text-align: center;
+					-webkit-transition: -webkit-transform 0.2s ease, box-shadow 0.2s ease;
+					transition: transform 0.2s ease, box-shadow 0.2s ease;
 				}
 
-				#main > .posts > article:nth-child(2n - 1) {
-					border-left-width: 0;
-				}
+					#main > .posts > article .project-card:hover {
+						box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+						color: #212931;
+						-webkit-transform: translateY(-0.2rem);
+						transform: translateY(-0.2rem);
+					}
 
-				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 0;
+					#main > .posts > article .project-card:focus-visible {
+						outline: 3px solid #18bfef;
+						outline-offset: 3px;
+					}
+
+					#main > .posts > article .project-card > .image.fit {
+						border-radius: 0;
+						margin: 0;
+						width: 100%;
+					}
+
+						#main > .posts > article .project-card > .image.fit img {
+							aspect-ratio: 16 / 10;
+							object-fit: cover;
+						}
+
+					#main > .posts > article .project-card-content {
+						-moz-align-items: flex-start;
+						-webkit-align-items: flex-start;
+						-ms-align-items: flex-start;
+						align-items: flex-start;
+						display: -moz-flex;
+						display: -webkit-flex;
+						display: -ms-flex;
+						display: flex;
+						-moz-flex: 1;
+						-webkit-flex: 1;
+						-ms-flex: 1;
+						flex: 1;
+						-moz-flex-direction: column;
+						-webkit-flex-direction: column;
+						-ms-flex-direction: column;
+						flex-direction: column;
+						padding: 1.5rem;
+						text-align: left;
+					}
+
+					#main > .posts > article .project-card h2 {
+						font-size: 1.25rem;
+						line-height: 1.3;
+						margin: 0 0 1rem;
+					}
+
+					#main > .posts > article .project-labels {
+						-moz-align-items: center;
+						-webkit-align-items: center;
+						-ms-align-items: center;
+						align-items: center;
+						display: -moz-flex;
+						display: -webkit-flex;
+						display: -ms-flex;
+						display: flex;
+						-moz-flex-wrap: wrap;
+						-webkit-flex-wrap: wrap;
+						-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+						gap: 0.5rem;
+					}
+
+					#main > .posts > article .project-type,
+					#main > .posts > article .project-status {
+						border-radius: 999px;
+						color: #ffffff;
+						font-size: 0.7rem;
+						font-family: "Source Sans Pro", Helvetica, sans-serif;
+						font-weight: 600;
+						line-height: 1.5;
+						padding: 0.3rem 0.65rem;
+						text-transform: uppercase;
+					}
+
+					#main > .posts > article .project-type {
+						background: #74684e;
+					}
+
+					#main > .posts > article .project-status {
+						background: var(--project-status-color, #18bfef);
 				}
 
 			@media screen and (max-width: 980px) {
@@ -3905,27 +4031,6 @@ input, select, textarea {
 					width: 100%;
 				}
 
-				#main > .posts > article:nth-child(2n - 1) {
-					border-left-width: 2px;
-				}
-
-				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 2px;
-				}
-
-				#main > .posts > article:nth-child(n) {
-					border-left-width: 0;
-				}
-
-				#main > .posts > article:nth-child(-n + 1) {
-					border-top-width: 0;
-				}
-
-				#main > .posts > article .image {
-					max-width: 25rem;
-					margin-left: auto;
-					margin-right: auto;
-				}
 
 			}
 
@@ -4290,6 +4395,70 @@ input, select, textarea {
 							margin-top: -0.325rem;
 						}
 
+		#footer.contact-footer {
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+
+			#footer.contact-footer > .contact-form {
+				-moz-flex-basis: auto;
+				-webkit-flex-basis: auto;
+				-ms-flex-basis: auto;
+				flex-basis: auto;
+				border-left: 0;
+				width: 100%;
+			}
+
+			#footer.contact-footer > .contact-links {
+				-moz-align-items: center;
+				-webkit-align-items: center;
+				-ms-align-items: center;
+				align-items: center;
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				-moz-flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				border-top: solid 2px #e2e2e2;
+				gap: 2rem;
+				justify-content: center;
+				padding: 2rem 4rem;
+			}
+
+		#footer .contact-link {
+			-moz-align-items: center;
+			-webkit-align-items: center;
+			-ms-align-items: center;
+			align-items: center;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex: 1 1 12rem;
+			-webkit-flex: 1 1 12rem;
+			-ms-flex: 1 1 12rem;
+			flex: 1 1 12rem;
+			border: 0;
+			color: #717981;
+			gap: 0.75rem;
+			justify-content: center;
+			min-width: 0;
+			padding: 0.75rem;
+		}
+
+			#footer .contact-link:hover {
+				color: #18bfef !important;
+			}
+
+			#footer .contact-link .icon {
+				font-size: 1.25rem;
+			}
+
 		#footer form label,
 		#footer h3,
 		#footer p {
@@ -4581,6 +4750,38 @@ input, select, textarea {
 			list-style: none;
 			padding-left: 0;
 		}
+
+		#navPanel .icons {
+			margin: 1.5rem 0 0;
+		}
+
+			#navPanel .icons li {
+				border-top: solid 2px #eeeeee;
+				display: block;
+				padding: 0.75rem 0;
+			}
+
+		#navPanel .language-toggle {
+			background: transparent;
+			border: 0;
+			box-shadow: none;
+			color: #a8adb1;
+			cursor: pointer;
+			display: block;
+			font-family: "Source Sans Pro", Helvetica, sans-serif;
+			font-size: 0.9rem;
+			font-weight: 900;
+			letter-spacing: 0.075em;
+			line-height: inherit;
+			padding: 0;
+			text-align: left;
+			text-transform: uppercase;
+			width: 100%;
+		}
+
+			#navPanel .language-toggle:hover {
+				color: #18bfef;
+			}
 
 			#navPanel .links li {
 				border-top: solid 2px #eeeeee;
