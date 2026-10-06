@@ -92,24 +92,27 @@
 				<!-- Footer -->
 					<footer id="footer" class="contact-footer">
 						<section class="contact-form">
-							<form method="post" action="#">
+							<form id="contact-form" method="post" action="https://formspree.io/f/xqpeeeby">
 								<div class="fields">
 									<div class="field">
 										<label for="name" data-i18n="nameLabel">Name</label>
-										<input type="text" name="name" id="name" />
+										<input type="text" name="name" id="name" required/>
 									</div>
 									<div class="field">
 										<label for="email" data-i18n="emailLabel">Email</label>
-										<input type="text" name="email" id="email" />
+										<input type="email" name="email" id="email" required/>
 									</div>
 									<div class="field">
 										<label for="message" data-i18n="messageLabel">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
+										<textarea name="message" id="message" rows="3" required></textarea>
 									</div>
 								</div>
-								<ul class="actions">
+								<div class="form-submit-row">
+									<ul class="actions">
 										<li><input type="submit" value="Send Message" data-i18n-value="sendMessage" /></li>
-								</ul>
+									</ul>
+									<div id="form-status" class="form-status" role="status" aria-live="polite" style="display: none;"></div>
+								</div>
 							</form>
 						</section>
 						<section class="contact-links" aria-label="Contact links" data-i18n-aria-label="contactLinks">
@@ -144,6 +147,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/language.js"></script>
+			<script src="assets/js/form-integration.js"></script>
 
 	</body>
 </html>

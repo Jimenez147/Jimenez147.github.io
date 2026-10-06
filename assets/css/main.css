@@ -90,6 +90,32 @@ input, select, textarea {
 
 	}
 
+.form-submit-row {
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+}
+
+	.form-submit-row ul.actions {
+		flex-shrink: 0;
+		margin-bottom: 0;
+	}
+
+	.form-status {
+		border-radius: 5px;
+		font-weight: bold;
+		min-width: 0;
+		padding: 10px;
+	}
+
+@media screen and (max-width: 480px) {
+	.form-submit-row {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+}
+
 	html {
 		box-sizing: border-box;
 	}
@@ -3470,8 +3496,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 65vh;
+				padding: 2rem 2rem 1rem 2rem ;
+				min-height: 40vh;
 			}
 
 				#intro h1 {

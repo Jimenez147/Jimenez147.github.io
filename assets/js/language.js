@@ -22,6 +22,9 @@
 			emailLabel: 'Email',
 			messageLabel: 'Message',
 			sendMessage: 'Send Message',
+			sendingMessage: 'Sending...',
+			messageSent: 'Message sent successfully!',
+			messageSendError: 'There was a problem sending your message.',
 			contactLinks: 'Contact links',
 			rightsReserved: 'All rights reserved.',
 			designCredit: 'Design:'
@@ -48,6 +51,9 @@
 			emailLabel: 'Correo electrónico',
 			messageLabel: 'Mensaje',
 			sendMessage: 'Enviar mensaje',
+			sendingMessage: 'Enviando...',
+			messageSent: '¡Mensaje enviado con éxito!',
+			messageSendError: 'Hubo un problema al enviar tu mensaje.',
 			contactLinks: 'Enlaces de contacto',
 			rightsReserved: 'Todos los derechos reservados.',
 			designCredit: 'Diseño:'
@@ -62,7 +68,9 @@
 		if (savedLanguage === 'en' || savedLanguage === 'es')
 			currentLanguage = savedLanguage;
 	}
-	catch (error) {}
+	catch (error) {
+		console.warn('Unable to read the saved language preference.', error);
+	}
 
 	function applyLanguage(language) {
 		currentLanguage = language;
@@ -98,8 +106,20 @@
 		try {
 			localStorage.setItem('portfolio-language', language);
 		}
-		catch (error) {}
+		catch (error) {
+			console.warn('Unable to save the language preference.', error);
+		}
 	}
+
+	document.addEventListener('portfolio:translate', function(event) {
+		var element = event.target;
+		var textKey = element.getAttribute('data-i18n');
+		var valueKey = element.getAttribute('data-i18n-value');
+		if (translations[currentLanguage][textKey])
+			element.textContent = translations[currentLanguage][textKey];
+		if (translations[currentLanguage][valueKey])
+			element.value = translations[currentLanguage][valueKey];
+	});
 
 	languageToggle.addEventListener('click', function() {
 		applyLanguage(currentLanguage === 'en' ? 'es' : 'en');

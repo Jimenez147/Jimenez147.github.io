@@ -84,7 +84,9 @@
 		if (savedLanguage === 'en' || savedLanguage === 'es')
 			currentLanguage = savedLanguage;
 	}
-	catch (error) {}
+	catch (error) {
+		console.warn('Unable to read the saved language preference.', error);
+	}
 
 	function applyLanguage(language) {
 		var pageTranslations = translations[language];
@@ -108,6 +110,13 @@
 
 			if (pageTranslations[altKey] !== undefined)
 				altElement.alt = pageTranslations[altKey];
+		}
+
+		try {
+			localStorage.setItem('portfolio-language', language);
+		}
+		catch (error) {
+			console.warn('Unable to save the language preference.', error);
 		}
 	}
 

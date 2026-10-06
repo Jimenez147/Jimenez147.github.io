@@ -90,13 +90,16 @@
 		if (savedLanguage === 'en' || savedLanguage === 'es')
 			currentLanguage = savedLanguage;
 	}
-	catch (error) {}
+	catch (error) {
+		console.warn('Unable to read the saved language preference.', error);
+	}
 
 	function applyLanguage(language) {
 		var pageTranslations = translations[language];
 		var textElements = document.querySelectorAll('[data-cw-i18n]');
 
 		document.title = pageTranslations.pageTitle;
+		document.documentElement.lang = language;
 
 		for (var index = 0; index < textElements.length; index++) {
 			var element = textElements[index];
@@ -109,6 +112,13 @@
 			var altElement = altElements[altIndex];
 			var altKey = altElement.getAttribute('data-cw-i18n-alt');
 			altElement.alt = pageTranslations[altKey];
+		}
+
+		try {
+			localStorage.setItem('portfolio-language', language);
+		}
+		catch (error) {
+			console.warn('Unable to save the language preference.', error);
 		}
 	}
 
