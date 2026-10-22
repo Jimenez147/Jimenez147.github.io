@@ -3,7 +3,7 @@
 		en: {
 			pageTitle: 'Project Portfolio',
 			siteTitle: 'Project Portfolio',
-			introTagline: 'Hardware meets software.',
+			introTagline: "Build to make your life easier, and realize you can make everyone else's life easier with your creations.",
 			navHome: 'Home',
 			navGeneric: 'Generic Page',
 			navElements: 'Elements Reference',
@@ -32,7 +32,7 @@
 		es: {
 			pageTitle: 'Portafolio de proyectos',
 			siteTitle: 'Portafolio de proyectos',
-			introTagline: 'Donde el hardware se encuentra con el software.',
+			introTagline: 'Crea para hacer tu vida más fácil y te darás cuenta de que puedes hacer la vida de todos los demás más fácil con tus creaciones.',
 			navHome: 'Inicio',
 			navGeneric: 'Página genérica',
 			navElements: 'Referencia de elementos',

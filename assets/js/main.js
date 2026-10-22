@@ -234,13 +234,13 @@
 
 				});
 
-			// Hide intro on scroll (<= small).
+			// Hide intro while the main content is in view (<= small).
 				breakpoints.on('<=small', function() {
 
 					$main.unscrollex();
 
 					$main.scrollex({
-						mode: 'middle',
+						mode: 'top',
 						top: '15vh',
 						bottom: '-15vh',
 						enter: function() {
