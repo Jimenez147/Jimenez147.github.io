@@ -6,6 +6,7 @@
 			projectSummary: 'Local text transcription and translation software designed to support interpreters in their work by ensuring the quality of their interpretation and improving their performance, while maintaining the strictest confidentiality guidelines.',
 			projectProperties: 'Project Properties',
 			projectBeginning: 'Project beginning',
+			projectStartDate: '08/04/2026',
 			projectType: 'Type of project',
 			aiSolution: 'AI-powered software',
 			projectState: 'Project state',
@@ -42,7 +43,7 @@
 			notepadDescription: 'It also includes a handy notepad for any quick notes you might need during the conversation.',
 			otherProjects: 'Other Projects',
 			collarMakerAlt: 'Collar maker machine',
-			smartBlindsAlt: 'Smart blackout blinds'
+			eclipseAlt: 'Eclipse'
 		},
 		es: {
 			pageTitle: 'Caption Wizard - Portafolio de proyectos',
@@ -50,6 +51,7 @@
 			projectSummary: 'Software de transcripción y traducción de texto local, diseñado para apoyar a intérpretes y mejorar la calidad de su trabajo con estrictas medidas de confidencialidad.',
 			projectProperties: 'Propiedades del proyecto',
 			projectBeginning: 'Fecha de inicio',
+			projectStartDate: '04/08/2026',
 			projectType: 'Tipo de proyecto',
 			aiSolution: 'Software potenciado por IA',
 			projectState: 'Estado del proyecto',
@@ -81,12 +83,12 @@
 			settingsAlt: 'Configuración de idiomas y diseño',
 			settingsDescription: 'Permite cambiar los idiomas y configurar el diseño según las preferencias del usuario.',
 			requirementsAlt: 'Requisitos del sistema',
-			requirementsDescription: 'el programa encargado del procesamiento de audio para generar texto tiene un consumo de 8GB de VRAM. Este es capaz de manejar la conexión de hasta 3 dispositivos de forma simultánea sin afectar los tiempos de respuesta.',
+			requirementsDescription: 'El programa encargado del procesamiento de audio para generar texto tiene un consumo de 8GB de VRAM. Este es capaz de manejar la conexión de hasta 3 dispositivos de forma simultánea sin afectar los tiempos de respuesta.',
 			notepadAlt: 'Bloc de notas de Caption Wizard',
 			notepadDescription: 'También incluye un práctico bloc de notas para apuntar cualquier información durante la conversación.',
 			otherProjects: 'Otros proyectos',
 			collarMakerAlt: 'Máquina para fabricar collares',
-			smartBlindsAlt: 'Persianas opacas inteligentes'
+			eclipseAlt: 'Eclipse'
 		}
 	};
 

@@ -35,7 +35,7 @@
 			internalMechanismAlt: 'Internal machine mechanism',
 			mechanismDescription: 'Internal machine mechanism.',
 			otherProjects: 'Other Projects',
-			smartBlindsAlt: 'Smart blackout blinds'
+			eclipseAlt: 'Eclipse'
 		},
 		es: {
 			pageTitle: 'Máquina Collar Maker - Portafolio de proyectos',
@@ -72,7 +72,7 @@
 			internalMechanismAlt: 'Mecanismo interno de la máquina',
 			mechanismDescription: 'Mecanismo interno de la máquina.',
 			otherProjects: 'Otros proyectos',
-			smartBlindsAlt: 'Persianas opacas inteligentes'
+			eclipseAlt: 'Eclipse'
 		}
 	};
 
